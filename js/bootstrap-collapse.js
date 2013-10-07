@@ -61,7 +61,7 @@
       if (actives && actives.length) {
         hasData = actives.data('collapse')
         if (hasData && hasData.transitioning) return
-        actives.collapse('hide')
+        actives.collapse('hide').parents('.accordion-group').find('.accordion-toggle').addClass('collapsed');
         hasData || actives.data('collapse', null)
       }
 
